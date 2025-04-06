@@ -2,30 +2,30 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 5f; //bullet travel speed
-    private Vector3 direction; //bullet direction
+    public float speed = 5f;
+    private Vector3 direction;
 
-    public void SetDirection(Vector3 dir) //method sets direction for bullet
+    public void SetDirection(Vector3 dir)
     {
-        direction = dir.normalized; //normalises to ensure consistent speed
+        direction = dir.normalized;
     }
 
-    void Update() //this is called once per frame
+    void Update()
     {
-        transform.position += direction * speed * Time.deltaTime; //moves bullet in specific direction at set speed
+        transform.position += direction * speed * Time.deltaTime;
     }
 
-    void OnTriggerEnter2D(Collider2D other) //called when bullet collides with another collider (player)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) //checks if object tagged player is hit
+        if (other.CompareTag("Player"))
         {
-            HealthManager health = other.GetComponent<HealthManager>(); //gets the health manager component
+            HealthManager health = other.GetComponent<HealthManager>();
             if (health != null)
             {
-                health.TakeDamage(10); //player takes 10 damage
+                health.TakeDamage(10);
             }
 
-            Destroy(gameObject); //destroys bullet after player is hit
+            Destroy(gameObject);
         }
     }
 }
