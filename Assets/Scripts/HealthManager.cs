@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
@@ -17,7 +18,7 @@ public class HealthManager : MonoBehaviour
     { 
         if (healthAmount <= 0) //CHANGE THIS PART TO WHAT YOU WANT TO HAPPEN IF THE PLAYER HEALTH DROPS TO 0 (PLAYER DIES!)
         {
-            Application.LoadLevel(Application.loadedLevel); //for now it is set to reload the level from start after player dies.
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //for now it is set to reload the level from start after player dies.
         }
 
         if (Input.GetKeyDown(KeyCode.Return)) //TESTS FOR DAMAGE TAKING WITH (RETURN/ENTER KEY!) EDIT THIS IN FUTURE FOR HOW U WANT TO TAKE DAMAGE
