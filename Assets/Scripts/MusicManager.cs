@@ -6,7 +6,7 @@ public class MusicManager : MonoBehaviour
     private static MusicManager Instance;
     private AudioSource audioSource;
     public AudioClip backgroundMusic;
-   
+    [SerializeField] private Slider musicSlider;
 
     private void Awake(){
         if(Instance == null){
@@ -25,6 +25,7 @@ public class MusicManager : MonoBehaviour
        if(backgroundMusic != null){
         PlayBackgroundMusic(false, backgroundMusic);
        } 
+       musicSlider.onValueChanged.AddListener(delegate {SetVolume(musicSlider.value);});
     }
 
     public static void SetVolume(float volume){
