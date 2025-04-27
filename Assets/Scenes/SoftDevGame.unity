@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 8300000, guid: 9169147ad53f0344f933b113f6a25f83, type: 3}
-  musicSlider: {fileID: 0}
 --- !u!82 &8815148
 AudioSource:
   m_ObjectHideFlags: 0
@@ -164,7 +163,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.216
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -131590,6 +131589,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 17, y: 9, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -131600,7 +131609,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 7355f5d2e734b4447b31a9c3b35686d4, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 54e8675acbd8aab438aa8a5613493505, type: 2}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: ffae358f47095b745965e46b1b5558f0, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: cacd4980a30f9304ea2c2a95d5cd2ef9, type: 2}
@@ -131619,7 +131628,7 @@ Tilemap:
     m_Data: {fileID: -96796154962138083, guid: 7a50cd9a7462bdf47b2c9b09980aa02b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 3216594195550930655, guid: 7a50cd9a7462bdf47b2c9b09980aa02b, type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 3038985000587531000, guid: 7a50cd9a7462bdf47b2c9b09980aa02b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -3627854407871609761, guid: 7a50cd9a7462bdf47b2c9b09980aa02b, type: 3}
@@ -131630,7 +131639,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1949730731670058941, guid: 7a50cd9a7462bdf47b2c9b09980aa02b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 13
+  - m_RefCount: 14
     m_Data:
       e00: 1
       e01: 0
@@ -131649,13 +131658,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 13
+  - m_RefCount: 14
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -14, y: -11, z: 0}
-  m_Size: {x: 33, y: 17, z: 1}
+  m_Size: {x: 33, y: 21, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -131708,7 +131717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5bb064c6ded4344bd0e6c9669d65a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 4
+  _moveSpeed: 2.8
 --- !u!61 &1799515152
 BoxCollider2D:
   m_ObjectHideFlags: 0
