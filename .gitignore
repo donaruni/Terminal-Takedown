@@ -72,11 +72,4 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-*.meta
-Assets/UI/Menu/pausebuttongreenblue.png.meta
-Assets/UI/Menu/pausebuttongreenwhite.png.meta
-Assets/UI/Menu/pausepanel-greenblue.png.meta
-Assets/UI/Timer/timerbackground.png.meta
-Assets/UI/Timer/timerfill.png.meta
-
 
