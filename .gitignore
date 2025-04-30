@@ -25,6 +25,8 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
+vscode/
 
 # Gradle cache directory
 .gradle/
@@ -76,3 +78,5 @@ Assets/UI/Menu/pausebuttongreenwhite.png.meta
 Assets/UI/Menu/pausepanel-greenblue.png.meta
 Assets/UI/Timer/timerbackground.png.meta
 Assets/UI/Timer/timerfill.png.meta
+
+
