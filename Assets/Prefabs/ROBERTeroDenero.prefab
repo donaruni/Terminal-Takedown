@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1414385389917424252}
   - component: {fileID: 7410792688597135051}
   - component: {fileID: 4580393349303708383}
+  - component: {fileID: 8322533805193655041}
   m_Layer: 0
   m_Name: ROBERTeroDenero
   m_TagString: Untagged
@@ -193,3 +194,16 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   player: {fileID: 0}
   shootInterval: 2
+--- !u!114 &8322533805193655041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054410873811562497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd03bc04ccce4a669ab0faeee6c5be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terminalUIHandler: {fileID: 0}
