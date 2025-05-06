@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70ad3c207d1df924789c0876ba512c08
+guid: 7ceaa423cd1d54b49b82190f3752826c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5497871354319086821
-    second: pausebuttongreenwhite_0
+      213: -5871406865665108523
+    second: pausepanel-greenblue_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pausebuttongreenwhite_0
+      name: pausepanel-greenblue_0
       rect:
         serializedVersion: 2
-        x: 223
-        y: 223
-        width: 578
-        height: 610
+        x: 63
+        y: 63
+        width: 898
+        height: 930
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e42cf62edc5c4c40800000000000000
-      internalID: 5497871354319086821
+      spriteID: 5d5dd305092948ea0800000000000000
+      internalID: -5871406865665108523
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pausebuttongreenwhite_0: 5497871354319086821
+      pausepanel-greenblue_0: -5871406865665108523
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
