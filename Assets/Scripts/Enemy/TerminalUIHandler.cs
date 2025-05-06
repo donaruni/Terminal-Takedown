@@ -12,6 +12,8 @@ public class TerminalUIHandler : MonoBehaviour
 
     public SoftDevQuestionManager questionManager; // Reference to the SoftDevQuestionManager
 
+    public GameObject explosionPrefab;
+
     // Call this to show the terminal
     public void OpenTerminal(GameObject robot)
     {
@@ -38,8 +40,7 @@ public class TerminalUIHandler : MonoBehaviour
                 // Remove all listeners first, then add the appropriate listener
                 int index = i; // Capture the loop variable
                 answerButtons[i].onClick.RemoveAllListeners();
-                answerButtons[i].onClick.AddListener(() => OnAnswerSelected(index));
-            }
+                answerButtons[i].onClick.AddListener(() => OnAnswerSelected(index));}
             else
             {
                 answerButtons[i].gameObject.SetActive(false); // Hide unused buttons
@@ -70,8 +71,15 @@ public class TerminalUIHandler : MonoBehaviour
     // Explode the robot
     private void ExplodeRobot(GameObject robot)
     {
-        // Example explosion logic (you can replace this with your own effect)
-        Destroy(robot); // Destroy the robot GameObject
-        Debug.Log("Robot exploded!");
+    
+    if (explosionPrefab != null)
+    {
+        Instantiate(explosionPrefab, robot.transform.position, Quaternion.identity);
     }
+
+    // Destroy the robot 
+    Destroy(robot); 
+    Debug.Log("Robot exploded!");
+    }
+   
 }
