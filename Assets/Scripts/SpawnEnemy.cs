@@ -21,12 +21,22 @@ public class SpawnEnemy : MonoBehaviour
     }
 
     void SpawnEnemies()
+{
+    if (player == null)
     {
-        if (player == null) return;
-
-        Vector2 offset = Random.insideUnitCircle.normalized * spawnRadius;
-        Vector3 spawnPos = player.position + new Vector3(offset.x, offset.y, 0f);
-
-        Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        Debug.LogError("Player is not assigned in SpawnEnemy!");
+        return;
     }
+
+    if (enemyPrefab == null)
+    {
+        Debug.LogError("Enemy Prefab is not assigned in SpawnEnemy!");
+        return;
+    }
+
+    Vector2 offset = Random.insideUnitCircle.normalized * spawnRadius;
+    Vector3 spawnPos = player.position + new Vector3(offset.x, offset.y, 0f);
+
+    Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+}
 }
