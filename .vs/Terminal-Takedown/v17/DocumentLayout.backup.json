@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|c:\\users\\nikee\\onedrive\\documents\\github\\terminal-takedown\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|c:\\users\\nikee\\onedrive\\documents\\github\\terminal-takedown\\assets\\scripts\\enemyfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,36 +34,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
+              "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T04:38:40.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SpawnEnemy.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\SpawnEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnEnemy.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\SpawnEnemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\SpawnEnemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T06:44:44.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EnemyFollow.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\EnemyFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyFollow.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\EnemyFollow.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyFollow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T06:38:54.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Timer.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\Timer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Timer.cs",
@@ -70,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PauseMenu.cs",
@@ -82,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\PauseMenu.cs",
