@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1657d220b772e8d4d8c78e6867b67588
+guid: dd77fb1996c3d394ba9492bba0027cf0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6365449675337707376
-    second: shataibullet_0
+      213: -5871406865665108523
+    second: pausepanel-greenblue_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shataibullet_0
+      name: pausepanel-greenblue_0
       rect:
         serializedVersion: 2
-        x: 159
-        y: 415
-        width: 642
-        height: 258
+        x: 63
+        y: 63
+        width: 898
+        height: 930
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07f212e01ce965850800000000000000
-      internalID: 6365449675337707376
+      spriteID: 5d5dd305092948ea0800000000000000
+      internalID: -5871406865665108523
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      shataibullet_0: 6365449675337707376
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
