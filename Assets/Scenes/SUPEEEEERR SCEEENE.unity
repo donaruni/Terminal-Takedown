@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 8300000, guid: 9169147ad53f0344f933b113f6a25f83, type: 3}
+  deathMusic: {fileID: 8300000, guid: 202b4927556002948b1aef08a9d8181f, type: 3}
 --- !u!82 &8815148
 AudioSource:
   m_ObjectHideFlags: 0
@@ -130164,6 +130165,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer
       objectReference: {fileID: 0}
+    - target: {fileID: 4159957802505088608, guid: 003ec7d73343ca84692d7f433b015163, type: 3}
+      propertyPath: time
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159957802505088608, guid: 003ec7d73343ca84692d7f433b015163, type: 3}
+      propertyPath: healthManager
+      value: 
+      objectReference: {fileID: 1799515157}
     - target: {fileID: 6104856852046491456, guid: 003ec7d73343ca84692d7f433b015163, type: 3}
       propertyPath: m_LocalPosition.x
       value: 713.0264
@@ -130651,7 +130660,7 @@ GameObject:
   - component: {fileID: 722469006}
   m_Layer: 0
   m_Name: SpawnEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131939,7 +131948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5bb064c6ded4344bd0e6c9669d65a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 2.8
+  _moveSpeed: 2.4
 --- !u!61 &1799515152
 BoxCollider2D:
   m_ObjectHideFlags: 0

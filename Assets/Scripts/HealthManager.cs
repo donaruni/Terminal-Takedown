@@ -27,6 +27,7 @@ public class HealthManager : MonoBehaviour
         if (healthAmount <= 0 && !isDead) //CHANGE THIS PART TO WHAT YOU WANT TO HAPPEN IF THE PLAYER HEALTH DROPS TO 0 (PLAYER DIES!)
         {
             isDead= true;
+            MusicManager.Instance.PlayDeathMusic();
             if (playAgain != null)
             {
                 playAgain.SetActive(true);
@@ -52,6 +53,31 @@ public class HealthManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+    
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.PlayBackgroundMusic(true, MusicManager.Instance.backgroundMusic);
+        }
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+
+    public bool IsDead()
+    {
+        return isDead;
+    }
+
+    public void MarkAsDead()
+    {
+        isDead = true;
+        if (playAgain != null)
+        {
+            playAgain.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        MusicManager.Instance.PlayBackgroundMusic(true, MusicManager.Instance.deathMusic);
+    }
+
+
 }

@@ -8,18 +8,33 @@ public class Timer : MonoBehaviour
     public Image Fill;
     public float Max;
 
-    void Start()
-    {
-
-    }
+    private bool hasTriggered = false;
+    public HealthManager healthManager;
 
     void Update()
     {
-        time -= Time.deltaTime;
-        TimerText.text = "" + (int)time;
-        Fill.fillAmount = time / Max;
+        if (time > 0)
+        {
+            time -= Time.deltaTime;
+            TimerText.text = "" + (int)time;
+            Fill.fillAmount = time / Max;
+        }
 
-        if (time < 0)
+        if (time <= 0 && !hasTriggered)
+        {
+            hasTriggered = true;
             time = 0;
+
+            if (healthManager != null)
+            {
+                healthManager.healthAmount = 0; // Simulate death
+            }
+
+            if (MusicManager.Instance != null)
+            {
+                MusicManager.Instance.PlayDeathMusic();
+            }
+        }
     }
 }
+
