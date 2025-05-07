@@ -12,6 +12,7 @@ public class TerminalUIHandler : MonoBehaviour
 
     public SoftDevQuestionManager questionManager; 
     public GameObject explosionPrefab; 
+    public float chainReactionRadius = 5f; // Radius for chain reaction
 
     // Call to show terminal
     public void OpenTerminal(GameObject robot)
@@ -57,16 +58,44 @@ public class TerminalUIHandler : MonoBehaviour
         }
     }
 
-    // Explode the robot
+    // Explode the robot and trigger chain reaction
     private void ExplodeRobot(GameObject robot)
     {
+        if (robot == null) return;
+
+        // Spawn the explosion prefab at the robot's position
         if (explosionPrefab != null)
         {
             Instantiate(explosionPrefab, robot.transform.position, Quaternion.identity);
         }
+        else
+        {
+            Debug.LogWarning("Explosion prefab is not assigned!");
+        }
 
-        // Only destroy the robot instance, not the prefab
+        // Trigger chain reaction for nearby robots
+        TriggerChainReaction(robot);
+
+        // Destroy the robot GameObject
         Destroy(robot);
         Debug.Log("Robot exploded!");
+    }
+
+    // Trigger chain reaction for nearby robots
+    private void TriggerChainReaction(GameObject robot)
+    {
+        // Find all colliders within the chain reaction radius
+        Collider[] nearbyRobots = Physics.OverlapSphere(robot.transform.position, chainReactionRadius);
+
+        foreach (Collider collider in nearbyRobots)
+        {
+            GameObject nearbyRobot = collider.gameObject;
+
+            // Ensure the nearby GameObject is a robot and not the already-exploded one
+            if (nearbyRobot != robot && nearbyRobot.CompareTag("Robot"))
+            {
+                ExplodeRobot(nearbyRobot); // Trigger explosion for the nearby robot
+            }
+        }
     }
 }

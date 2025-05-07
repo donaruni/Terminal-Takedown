@@ -1,13 +1,19 @@
 using UnityEngine;
 
-// Script to destroy explosion GameObject after the animation ends
 public class ExplosionEffect : MonoBehaviour
 {
-    public float destroyDelay = 12f; // Length of the animation
-
     void Start()
     {
-        
-        Destroy(gameObject, destroyDelay);
+        Animator animator = GetComponent<Animator>();
+        if (animator != null)
+        {
+            // Destroy after the animation ends
+            Destroy(gameObject, animator.GetCurrentAnimatorStateInfo(0).length);
+        }
+        else
+        {
+            Debug.LogWarning("ExplosionEffect: Animator not found! Using default delay.");
+            Destroy(gameObject, 2f); // Default delay
+        }
     }
 }
