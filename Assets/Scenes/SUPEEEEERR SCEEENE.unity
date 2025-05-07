@@ -130166,6 +130166,10 @@ PrefabInstance:
       value: Timer
       objectReference: {fileID: 0}
     - target: {fileID: 4159957802505088608, guid: 003ec7d73343ca84692d7f433b015163, type: 3}
+      propertyPath: Max
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159957802505088608, guid: 003ec7d73343ca84692d7f433b015163, type: 3}
       propertyPath: time
       value: 120
       objectReference: {fileID: 0}
@@ -132262,6 +132266,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1799515155}
+    - target: {fileID: 4580393349303708383, guid: bf617f606b3fc1c4ab7e7f5905082156, type: 3}
+      propertyPath: bulletObj
+      value: 
+      objectReference: {fileID: 534933366}
     - target: {fileID: 4580393349303708383, guid: bf617f606b3fc1c4ab7e7f5905082156, type: 3}
       propertyPath: bulletPrefab
       value: 

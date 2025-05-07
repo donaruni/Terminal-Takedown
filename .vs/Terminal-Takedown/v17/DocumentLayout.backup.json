@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\Timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|c:\\users\\nikee\\onedrive\\documents\\github\\terminal-takedown\\assets\\scripts\\enemyfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|c:\\users\\nikee\\onedrive\\documents\\github\\terminal-takedown\\assets\\scripts\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\healthmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\healthmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\spawnenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawnenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\enemyfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyfollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\assets\\scripts\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C53CB8E-56C6-49E4-FC3F-E656B6520860}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,23 +54,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "PauseMenu.cs",
+              "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\PauseMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PauseMenu.cs",
+              "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PauseMenu.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:16:57.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MusicManager.cs",
+              "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\MusicManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MusicManager.cs",
+              "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\MusicManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MusicManager.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:16:09.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T10:14:58.101Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "DeathScreen.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\DeathScreen.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DeathScreen.cs",
@@ -74,81 +106,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "HealthManager.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\HealthManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HealthManager.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\HealthManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\HealthManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwEQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T05:15:53.925Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "EnemyBullet.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\EnemyBullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyBullet.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\EnemyBullet.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyBullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wAYAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T04:43:25.782Z"
+              "WhenOpened": "2025-05-06T04:43:25.782Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\Bullet.cs",
               "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T04:38:40.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "SpawnEnemy.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\SpawnEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnEnemy.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\SpawnEnemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\SpawnEnemy.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwCAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T06:44:44.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "EnemyFollow.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\EnemyFollow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyFollow.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\EnemyFollow.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyFollow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T06:38:54.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T06:38:54.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Timer.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\Timer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Timer.cs",
               "ToolTip": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\Scripts\\Timer.cs",
               "RelativeToolTip": "Assets\\Scripts\\Timer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T06:38:53.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T06:38:53.554Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "C:\\Users\\nikee\\OneDrive\\Documents\\GitHub\\Terminal-Takedown\\Assets\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\PauseMenu.cs",
