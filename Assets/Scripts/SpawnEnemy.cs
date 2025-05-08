@@ -10,25 +10,15 @@ public class SpawnEnemy : MonoBehaviour
     private float timer;
 
     void Update()
-{
-    if (enemyPrefab == null)
     {
-        Debug.LogWarning("Enemy prefab is null during Update!");
-    }
+        timer += Time.deltaTime;
 
-    if (player == null)
-    {
-        Debug.LogWarning("Player is null during Update!");
+        if (timer >= spawnInterval)
+        {
+            SpawnEnemies();
+            timer = 0f;
+        }
     }
-
-    timer += Time.deltaTime;
-
-    if (timer >= spawnInterval)
-    {
-        SpawnEnemies();
-        timer = 0f;
-    }
-}
 
     void SpawnEnemies()
 {

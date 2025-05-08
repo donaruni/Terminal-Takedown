@@ -8,9 +8,10 @@ public class TerminalUIHandler : MonoBehaviour
     public Button[] answerButtons; 
     public GameObject terminalUI; 
     private SoftDevQuestion currentQuestion;
-    private GameObject clickedRobot;
+    private GameObject clickedRobot; 
+
     public SoftDevQuestionManager questionManager; 
-    public Timer timer; // Reference to the Timer script
+    public GameObject explosionPrefab; 
 
     // Call to show terminal
     public void OpenTerminal(GameObject robot)
@@ -53,20 +54,41 @@ public class TerminalUIHandler : MonoBehaviour
         if (index == currentQuestion.correctAnswerIndex)
         {
             ExplodeRobot(clickedRobot);
-
-            // Add 15 seconds to the timer
-            if (timer != null)
-            {
-                timer.AddTime(15f);
-            }
         }
     }
 
     // Explode the robot
     private void ExplodeRobot(GameObject robot)
     {
-        // Only destroy the robot instance, not the prefab
-        Destroy(robot);
-        Debug.Log("Robot exploded!");
+        // Instantiate the explosion animation at the robot's position
+        if (robot != null)
+        {
+            // Check if the explosion prefab is assigned
+            if (explosionPrefab != null)
+            {
+                // Instantiate the explosion prefab
+                GameObject explosion = Instantiate(explosionPrefab, robot.transform.position, Quaternion.identity);
+
+                // Trigger the explosion animation
+                Animator explosionAnimator = explosion.GetComponent<Animator>();
+                if (explosionAnimator != null)
+                {
+                    explosionAnimator.SetTrigger("OnEnemyDeath");
+                }
+                else
+                {
+                    Debug.LogWarning("No Animator component found on the explosion prefab!");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Explosion prefab is not assigned!");
+            }
+
+            // Destroy the robot GameObject after the explosion
+            Destroy(robot);
+
+            Debug.Log("Robot exploded!");
+        }
     }
 }
