@@ -10,6 +10,7 @@ public class TerminalUIHandler : MonoBehaviour
     private SoftDevQuestion currentQuestion;
     private GameObject clickedRobot;
     public SoftDevQuestionManager questionManager; 
+    public Timer timer; // Reference to the Timer script
 
     // Call to show terminal
     public void OpenTerminal(GameObject robot)
@@ -52,6 +53,12 @@ public class TerminalUIHandler : MonoBehaviour
         if (index == currentQuestion.correctAnswerIndex)
         {
             ExplodeRobot(clickedRobot);
+
+            // Add 15 seconds to the timer
+            if (timer != null)
+            {
+                timer.AddTime(15f);
+            }
         }
     }
 
