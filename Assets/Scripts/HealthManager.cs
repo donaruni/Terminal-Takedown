@@ -1,84 +1,48 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    public Image healthBar; //UI image representing health bar
-    public float healthAmount = 100f; //current health
-    public GameObject playAgain; //reference to play again panel
-
-    private bool isDead = false; //flag tracks if player is dead
+    public Image healthBar;
+    public float healthAmount = 100f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(playAgain != null) //makes sure the play again UI is hidden at start
-        {
-            playAgain.SetActive(false);
-        }
-
+        
     }
 
     // Update is called once per frame
     void Update()
-    {
-        //checks if health is 0 or below and the player is not dead
-        if (healthAmount <= 0 && !isDead) //CHANGE THIS PART TO WHAT YOU WANT TO HAPPEN IF THE PLAYER HEALTH DROPS TO 0 (PLAYER DIES!)
+    { 
+        if (healthAmount <= 0) //CHANGE THIS PART TO WHAT YOU WANT TO HAPPEN IF THE PLAYER HEALTH DROPS TO 0 (PLAYER DIES!)
         {
-            isDead= true;
-            MusicManager.Instance.PlayDeathMusic(); //play death music
-            if (playAgain != null) //shows play again UI and pauses game
-            {
-                playAgain.SetActive(true);
-                Time.timeScale = 0f;
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //for now it is set to reload the level from start after player dies.
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return)) //TESTS FOR DAMAGE TAKING WITH (RETURN/ENTER KEY!) EDIT THIS IN FUTURE FOR HOW U WANT TO TAKE DAMAGE
+        {
+            TakeDamage(20); //edit this part for damage taken
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)) //TESTS FOR HEALING WITH (SPACEBAR KEY!) EDIT THIS IN FUTURE FOR HOW U WANT TO HEAL DAMAGE TAKEN!
+        {
+            Heal(10); //edit this part for damage healed
         }
     }
 
-    public void TakeDamage(float damage) //call method to apply damage to player
+    public void TakeDamage(float damage)
     {
         healthAmount -= damage;
-        healthBar.fillAmount = healthAmount / 100f; //update the health bar UI
-    }
+        healthBar.fillAmount = healthAmount / 100f;
+    }    
 
-    public void Heal(float healingAmount) //call method to heal player
+    public void Heal(float healingAmount)
     {
         healthAmount += healingAmount;
-        healthAmount = Mathf.Clamp(healthAmount, 0, 100); //clamp health between 0 and 100
+        healthAmount = Mathf.Clamp(healthAmount, 0, 100);
 
-        healthBar.fillAmount = healthAmount / 100f; //update the health bar UI
+        healthBar.fillAmount = healthAmount / 100f;
     }
-
-    public void RestartGame() //restarts game by loading current scene
-    {
-        Time.timeScale = 1f; //resumes game time
-    
-        if (MusicManager.Instance != null) //resumes background music
-        {
-            MusicManager.Instance.PlayBackgroundMusic(true, MusicManager.Instance.backgroundMusic);
-        }
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //reloads active scene
-    }
-
-
-    public bool IsDead() //returns whether player is dead
-    {
-        return isDead;
-    }
-
-    public void MarkAsDead() //marks player as dead and handles UI and music
-    {
-        isDead = true;
-        if (playAgain != null) //show play again UI and pause game
-        {
-            playAgain.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        MusicManager.Instance.PlayBackgroundMusic(true, MusicManager.Instance.deathMusic); //play death music
-    }
-
-
 }

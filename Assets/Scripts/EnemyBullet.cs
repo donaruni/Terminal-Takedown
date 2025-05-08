@@ -2,36 +2,36 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    public GameObject bulletObj; //instantiates bullet object
-    public Transform player; //reference to players transform to aim at
-    public float shootInterval = 2f; //time interval between shots
+    public GameObject bulletPrefab;
+    public Transform player;
+    public float shootInterval = 2f;
 
-    private float shootTimer; //timer tracks next shot
+    private float shootTimer;
 
-    void Update() //called once per frame
+    void Update()
     {
-        if (player == null) return; //if there is no player to shoot at, do nothing
+        if (player == null) return;
 
-        shootTimer += Time.deltaTime; //accumulate time
+        shootTimer += Time.deltaTime;
 
-        if (shootTimer >= shootInterval) //if enough time has passed, shoot at player
+        if (shootTimer >= shootInterval)
         {
-            ShootAtPlayer(); //fires a bullet at player
-            shootTimer = 0f; //resets timer
+            ShootAtPlayer();
+            shootTimer = 0f;
         }
     }
 
-    void ShootAtPlayer() //fires a bullet in the direction of the player
+    void ShootAtPlayer()
     {
-        Vector3 direction = (player.position - transform.position).normalized; //calculates direction vector towards the player
-        GameObject bullet = Instantiate(bulletObj, transform.position, Quaternion.identity); //create the bullet at current enemy position without rotation
+        Vector3 direction = (player.position - transform.position).normalized;
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 
-        bullet.transform.right = -direction; //rotates the bullet so the tip faces the player (visuals)
+        bullet.transform.right = -direction;
 
-        Bullet bulletScript = bullet.GetComponent<Bullet>(); //gets bullet script component from bullet instance
+        Bullet bulletScript = bullet.GetComponent<Bullet>();
         if (bulletScript != null)
         {
-            bulletScript.SetDirection(direction); //sets direction so bullet moves correctly
+            bulletScript.SetDirection(direction);
         }
     }
 }
