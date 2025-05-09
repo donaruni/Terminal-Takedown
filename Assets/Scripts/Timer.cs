@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float time;
-    public Text TimerText;
-    public Image Fill;
-    public float Max;
+    public float time; //current time remaining
+    public Text TimerText; //reference to UI text component
+    public Image Fill; //reference to UI fill image
+    public float Max; //max value of timer
 
     void Start()
     {
@@ -14,13 +14,13 @@ public class Timer : MonoBehaviour
         time = Max;
     }
 
-    void Update()
+    void Update() //called once per frame
     {
-        time -= Time.deltaTime;
+        time -= Time.deltaTime; //decrease timer by time passed since last frame
         TimerText.text = "" + Mathf.CeilToInt(time); // Using CeilToInt to round up to 120 secs
-        Fill.fillAmount = time / Max;
+        Fill.fillAmount = time / Max; //update fill image
 
-        if (time < 0)
+        if (time < 0) //clamp time to prevent going to 0
             time = 0;
     }
 
