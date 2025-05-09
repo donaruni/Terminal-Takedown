@@ -1,8 +1,9 @@
 using UnityEngine;
 
+// Detects when an enemy is clicked and opens the terminal UI via the TerminalUIHandler
 public class EnemyClickHandler : MonoBehaviour
 {
-    public TerminalUIHandler terminalUIHandler; // Reference to the TerminalUIHandler script
+    public TerminalUIHandler terminalUIHandler; 
 
     private void OnMouseDown()
     {
@@ -10,10 +11,6 @@ public class EnemyClickHandler : MonoBehaviour
         if (terminalUIHandler != null)
         {
             terminalUIHandler.OpenTerminal(this.gameObject);
-        }
-        else
-        {
-            Debug.LogError("TerminalUIHandler is not assigned to this enemy!");
         }
     }
 }
