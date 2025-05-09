@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class DamageFlash : MonoBehaviour
 {
     // color to flash when hit (white by default)
@@ -10,78 +9,98 @@ public class DamageFlash : MonoBehaviour
     // how long the flash lasts
     [SerializeField] private float _flashTime = 0.25f;
 
-// stores all sprite renderers on this object and its children
-private SpriteRenderer[] _spriteRenderers;
- // stores the materials from the sprite renderers
-private Material[] _materials;
-// used to track the running coroutine
-private Coroutine _damageFlashCoroutine;
+    // stores all sprite renderers on this object and its children
+    private SpriteRenderer[] _spriteRenderers;
 
-// runs when the object starts up
-private void Awake()
-{
-    // get all sprite renderers in childre
-    _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-    Init();
-}
+    // stores the materials from the sprite renderers
+    private Material[] _materials;
 
-// sets up the materials array
-private void Init()
-{
-    _materials = new Material[_spriteRenderers.Length];
+    // used to track the running coroutine
+    private Coroutine _damageFlashCoroutine;
 
-    // assign sprite renderer materials to _materials
-    for (int i = 0; i < _spriteRenderers.Length; i++)
+    // runs when the object starts up
+    private void Awake()
     {
-        _materials[i] = _spriteRenderers[i].material;
+        // get all sprite renderers in children
+        _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        Init();
     }
-}
-// call this to start the flash effect
-public void CallDamageFlash()
-{
-    _damageFlashCoroutine = StartCoroutine(DamageFlasher());
-}
 
- // handles the flash effect over time
-private IEnumerator DamageFlasher()
-{
-    // set the color
-    SetFlashColor();
-
-    // lerp the flash amount
-    float currentFlashAmount = 0f;
-    float elapsedTime = 0f;
-    while (elapsedTime < _flashTime)
+    // sets up the materials array
+    private void Init()
     {
-        // iterate elapsed time
-        elapsedTime += Time.deltaTime;
+        _materials = new Material[_spriteRenderers.Length];
+
+        // assign sprite renderer materials to _materials
+        for (int i = 0; i < _spriteRenderers.Length; i++)
+        {
+            _materials[i] = _spriteRenderers[i].material;
+
+            // checks if the material supports "_FlashColor" and "_FlashAmount"
+            if (!_materials[i].HasProperty("_FlashColor") || !_materials[i].HasProperty("_FlashAmount"))
+            {
+                Debug.LogWarning($"Material on {_spriteRenderers[i].gameObject.name} does not support '_FlashColor' or '_FlashAmount'.");
+            }
+
+            // resets the flash amount to 0
+            _materials[i].SetFloat("_FlashAmount", 0f);
+        }
+    }
+
+    // call this to start the flash effect
+    public void CallDamageFlash()
+    {
+        // Stop any ongoing flash coroutine to prevent overlapping effects
+        if (_damageFlashCoroutine != null)
+        {
+            StopCoroutine(_damageFlashCoroutine);
+        }
+
+        _damageFlashCoroutine = StartCoroutine(DamageFlasher());
+    }
+
+    // handles the flash effect over time
+    private IEnumerator DamageFlasher()
+    {
+        // set the color
+        SetFlashColor();
 
         // lerp the flash amount
-        currentFlashAmount = Mathf.Lerp(1f, 0f, (elapsedTime / _flashTime));
-        SetFlashAmount(currentFlashAmount);
+        float currentFlashAmount = 0f;
+        float elapsedTime = 0f;
+        while (elapsedTime < _flashTime)
+        {
+            // iterate elapsed time
+            elapsedTime += Time.deltaTime;
 
-        yield return null;
+            // lerp the flash amount
+            currentFlashAmount = Mathf.Lerp(1f, 0f, (elapsedTime / _flashTime));
+            SetFlashAmount(currentFlashAmount);
+
+            yield return null;
+        }
+
+        // ensure flash amount is reset to 0 at the end
+        SetFlashAmount(0f);
+        _damageFlashCoroutine = null;
     }
-}
 
-private void SetFlashColor()
-{
-    // set the color
-    for (int i = 0; i < _materials.Length; i++)
+    private void SetFlashColor()
     {
-        _materials[i].SetColor("_FlashColor", _flashColor);
+        // set the color
+        for (int i = 0; i < _materials.Length; i++)
+        {
+            _materials[i].SetColor("_FlashColor", _flashColor);
+        }
     }
-}
-// apply the flash color to all materials
-private void SetFlashAmount(float amount)
-{
-    // set the flash amount
-    for (int i = 0; i < _materials.Length; i++)
+
+    // apply the flash color to all materials
+    private void SetFlashAmount(float amount)
     {
-        _materials[i].SetFloat("_FlashAmount", amount);
+        // set the flash amount
+        for (int i = 0; i < _materials.Length; i++)
+        {
+            _materials[i].SetFloat("_FlashAmount", amount);
+        }
     }
-}
-
-
-
 }
