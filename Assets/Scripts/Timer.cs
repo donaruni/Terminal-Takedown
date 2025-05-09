@@ -10,14 +10,14 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        // Initialize the timer (optional)
+        // Initializing the timer 
         time = Max;
     }
 
     void Update()
     {
         time -= Time.deltaTime;
-        TimerText.text = "" + Mathf.CeilToInt(time); // Use CeilToInt to round up
+        TimerText.text = "" + Mathf.CeilToInt(time); // Using CeilToInt to round up to 120 secs
         Fill.fillAmount = time / Max;
 
         if (time < 0)
@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
     {
         time += additionalTime;
 
-        // Ensure the timer doesn't exceed its maximum
+        // Ensuring the timer doesn't exceed its maximum
         if (time > Max)
         {
             time = Max;
