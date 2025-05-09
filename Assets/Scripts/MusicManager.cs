@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
-    private static MusicManager Instance;
+    public static MusicManager Instance;
     private AudioSource audioSource;
     public AudioClip backgroundMusic;
    
@@ -44,7 +44,20 @@ public class MusicManager : MonoBehaviour
     }
 
     public void PauseBackgroundMusic(){
+ 
         audioSource.Pause();
     }
 
+    public AudioClip deathMusic;
+
+    public void PlayDeathMusic()
+    {
+        if (deathMusic != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = deathMusic;
+            audioSource.Play();
+        }
+    }  
 }
+
