@@ -3,37 +3,37 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu; //reference to pause menu UI GameObject
-    [SerializeField] AudioSource backgroundMusic; //reference to background music AudioSource
+    [SerializeField] GameObject pauseMenu;
+    [SerializeField] AudioSource backgroundMusic;
 
-    public void Pause() //called when game is paused
+    public void Pause()
     {
-        pauseMenu.SetActive(true); //enable the UI
-        Time.timeScale = 0; //freezes game
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
 
-        if (backgroundMusic != null && backgroundMusic.isPlaying) //pauses background music if playing
+        if (backgroundMusic != null && backgroundMusic.isPlaying)
         {
             backgroundMusic.Pause();
         }
     }
 
-    public void Menu() //placeholder for menu
+    public void Menu()
     {
 
     }
 
-    public void Resume() //called when game is resumed
+    public void Resume()
     {
-        pauseMenu.SetActive(false); //disable the UI
-        Time.timeScale = 1; //resumes the game time
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
 
-        if (backgroundMusic != null && !backgroundMusic.isPlaying) //resumes background music if not playing
+        if (backgroundMusic != null && !backgroundMusic.isPlaying)
         {
             backgroundMusic.Play();
         }
     }
 
-    public void Options() //placeholder for options
+    public void Options()
     {
 
     }
