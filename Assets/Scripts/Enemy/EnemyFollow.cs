@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public Transform player;     
-    public float speed = 2f;      
+    public Transform player;
+    public float speed = 2f;
+    private Rigidbody2D rb;
 
-    void Update()
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void FixedUpdate()
     {
         if (player == null) return;
 
-        Vector3 direction = (player.position - transform.position).normalized;
-        transform.position += direction * speed * Time.deltaTime;
+        Vector2 direction = (player.position - transform.position).normalized;
+        rb.linearVelocity = direction * speed;
     }
 }

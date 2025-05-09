@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      terminal-sprite-1.png_0: -5750424399443231537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
