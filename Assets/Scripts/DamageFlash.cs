@@ -36,11 +36,7 @@ public class DamageFlash : MonoBehaviour
         {
             _materials[i] = _spriteRenderers[i].material;
 
-            // checks if the material supports "_FlashColor" and "_FlashAmount"
-            if (!_materials[i].HasProperty("_FlashColor") || !_materials[i].HasProperty("_FlashAmount"))
-            {
-                Debug.LogWarning($"Material on {_spriteRenderers[i].gameObject.name} does not support '_FlashColor' or '_FlashAmount'.");
-            }
+            
 
             // resets the flash amount to 0
             _materials[i].SetFloat("_FlashAmount", 0f);
