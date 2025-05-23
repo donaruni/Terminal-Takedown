@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
@@ -6,57 +7,104 @@ public class MusicManager : MonoBehaviour
     public static MusicManager Instance; //instance of music manager
     private AudioSource audioSource; //reference to the audiosource
     public AudioClip backgroundMusic; //background music clip
-   
+    public AudioClip deathMusic; //death music clip
 
-    private void Awake(){ //called when script instance is loaded
-        if(Instance == null){ //implements singleton pattern ensuring only one instance exists
+    private void Awake()
+    {
+        if (Instance == null)
+        {
             Instance = this;
             audioSource = GetComponent<AudioSource>();
             DontDestroyOnLoad(gameObject);
-
         }
-        else{
+        else
+        {
             Destroy(gameObject);
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private void OnEnable()
     {
-       if(backgroundMusic != null){ //automatically play background music if assigned
-        PlayBackgroundMusic(false, backgroundMusic);
-       } 
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public static void SetVolume(float volume){ //static method to adjust music volume
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        int mainMenuSceneIndex = 0;
+        int gameSceneIndex = 5; // master scene
+
+        if (scene.buildIndex == mainMenuSceneIndex)
+        {
+            StopMusic(); // stop any game music when on menu
+        }
+        else if (scene.buildIndex == gameSceneIndex)
+        {
+        // Always start background music when entering master scene
+            PlayBackgroundMusic(true, backgroundMusic);
+        }
+        else
+        {
+        // Optional: stop music on other scenes if needed
+            StopMusic();
+        }
+    }
+
+
+    public static void SetVolume(float volume)
+    {
         Instance.audioSource.volume = volume;
     }
 
-    public void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null){ //method to play background music
-        if(audioClip != null){ //assign new clip if provided
+    public void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
+    {
+        if (audioClip != null)
+        {
             audioSource.clip = audioClip;
         }
-        if(audioSource.clip != null){ //if a valid audio clip is set, play it
-            if(resetSong){
+        if (audioSource.clip != null)
+        {
+            if (resetSong)
+            {
                 audioSource.Stop();
             }
-            audioSource.Play(); //starts playing the music
+            audioSource.Play();
         }
     }
 
-    public void PauseBackgroundMusic(){ //method to pause current playing song
+    public void PauseBackgroundMusic()
+    {
         audioSource.Pause();
     }
 
-    public AudioClip deathMusic; //music clip to be played upon player death
-
-    public void PlayDeathMusic() //method to stop current music and play death music
+    public void PlayDeathMusic()
     {
-        if (deathMusic != null){
-
+        if (deathMusic != null)
+        {
             audioSource.Stop();
             audioSource.clip = deathMusic;
             audioSource.Play();
         }
     }
 
+    public void StopMusic()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
+
+    public void EnsureBackgroundMusicPlaying()
+    {
+        if (!audioSource.isPlaying)
+        {
+            PlayBackgroundMusic(true, backgroundMusic);
+        }
+    }
 }
+

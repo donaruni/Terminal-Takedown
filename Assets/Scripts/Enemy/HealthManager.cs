@@ -115,4 +115,17 @@ public class HealthManager : MonoBehaviour
             MusicManager.Instance.PlayDeathMusic();
         }
     }
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f;
+
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.StopMusic();
+        }
+
+        SceneManager.LoadScene(0); // loads menu scene index
+    }
+
+
 }

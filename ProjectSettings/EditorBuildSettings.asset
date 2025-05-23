@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 047c4d52eff25fb4e93b261f0f686318
+  - enabled: 1
+    path: Assets/Scenes/ClassSelection.unity
+    guid: 3ce8229367c3b9441a2f20bade608079
+  - enabled: 1
+    path: Assets/Scenes/CyberSecChecklist.unity
+    guid: dc1ae37e5ee00d64c8f02edad068e7d1
+  - enabled: 1
+    path: Assets/Scenes/CyberSecIngame.unity
+    guid: 9e08f88535e6aeb41a3e09d59e5eb1d1
+  - enabled: 1
+    path: Assets/Scenes/SoftDevChecklist.unity
+    guid: fac7ee8f20c089c46b08c9589d5ee9a0
+  - enabled: 1
+    path: Assets/Scenes/Master Scene.unity
+    guid: 3ec45e6e3c942459cbe0f93ba96f4f97
+  - enabled: 0
     path: Assets/Scenes/Editing Scenes/SoftDevGame.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
