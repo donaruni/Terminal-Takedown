@@ -36,24 +36,22 @@ public class MusicManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         int mainMenuSceneIndex = 0;
-        int gameSceneIndex = 5; // master scene
+        int gameSceneIndex = 5; // master scene - in game scene for softdev
+        int cyberSecGameSceneIndex = 3; // cyber sec game scene 
 
         if (scene.buildIndex == mainMenuSceneIndex)
         {
             StopMusic(); // stop any game music when on menu
         }
-        else if (scene.buildIndex == gameSceneIndex)
+        else if (scene.buildIndex == gameSceneIndex || scene.buildIndex == cyberSecGameSceneIndex)
         {
-        // Always start background music when entering master scene
-            PlayBackgroundMusic(true, backgroundMusic);
+            PlayBackgroundMusic(true, backgroundMusic); // start background music when entering master scene or cyber sec game scene
         }
         else
         {
-        // Optional: stop music on other scenes if needed
-            StopMusic();
+            StopMusic(); 
         }
     }
-
 
     public static void SetVolume(float volume)
     {
@@ -107,4 +105,5 @@ public class MusicManager : MonoBehaviour
         }
     }
 }
+
 

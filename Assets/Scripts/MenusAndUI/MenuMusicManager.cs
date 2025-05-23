@@ -44,6 +44,13 @@ public class MenuMusicManager : MonoBehaviour
             audioSource.Play();
         }
 
+        // If coming from scene 3 to scene 0, restart the music
+        else if (previousSceneIndex == 3 && scene.buildIndex == 0)
+        {
+            audioSource.time = 0f; // reset to start
+            audioSource.Play();
+        }
+
         if (System.Array.Exists(menuScenes, index => index == scene.buildIndex))
         {
             if (!audioSource.isPlaying)
@@ -62,6 +69,7 @@ public class MenuMusicManager : MonoBehaviour
         previousSceneIndex = scene.buildIndex; // update last scene index
     }
 }
+
 
 
 
