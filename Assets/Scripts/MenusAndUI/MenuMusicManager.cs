@@ -1,25 +1,67 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuMusicManager : MonoBehaviour
 {
     public static MenuMusicManager instance;
     private AudioSource audioSource;
+    private int previousSceneIndex = -1; // store last loaded scene index
 
     void Awake()
     {
-        // Make sure only one instance exists
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Keep across scenes
+            DontDestroyOnLoad(gameObject);
             audioSource = GetComponent<AudioSource>();
             audioSource.loop = true;
             audioSource.Play();
         }
         else
         {
-            Destroy(gameObject); // Destroy duplicate instances
+            Destroy(gameObject);
         }
     }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        int[] menuScenes = { 0, 1, 2, 4 };
+
+        // If coming from scene 5 to scene 0, restart the music
+        if (previousSceneIndex == 5 && scene.buildIndex == 0)
+        {
+            audioSource.time = 0f; // reset to start
+            audioSource.Play();
+        }
+
+        if (System.Array.Exists(menuScenes, index => index == scene.buildIndex))
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Pause();
+            }
+        }
+
+        previousSceneIndex = scene.buildIndex; // update last scene index
+    }
 }
+
+
 
