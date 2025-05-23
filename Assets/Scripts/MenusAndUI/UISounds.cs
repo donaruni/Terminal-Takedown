@@ -50,8 +50,8 @@ public class UISounds : MonoBehaviour
     }
 
     // Class Selection Buttons
-    public void PlayBackButtonSound() => StartCoroutine(PlayAndLoad(backClickClip, 0));
-    public void PlaySoftDevButtonSound() => StartCoroutine(PlayAndLoad(softDevClickClip, 4));
+    public void PlayBackButtonSound() => StartCoroutine(PlayAndLoad(backClickClip, 0)); //scene transitions from class selection back to main menu
+    public void PlaySoftDevButtonSound() => StartCoroutine(PlayAndLoad(softDevClickClip, 4)); //scene transitions from class selection to 
     public void PlayCyberSecButtonSound() => StartCoroutine(PlayAndLoad(cyberSecClickClip, 2));
 
     // SoftDevChecklist Buttons
