@@ -15,6 +15,8 @@ public class MusicManager : MonoBehaviour
         {
             Instance = this;
             audioSource = GetComponent<AudioSource>();
+
+            transform.SetParent(null); //move to root so DontDestroyOnLoad works
             DontDestroyOnLoad(gameObject);
         }
         else
